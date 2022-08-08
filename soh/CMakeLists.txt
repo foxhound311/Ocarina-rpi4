@@ -1898,6 +1898,10 @@ else()
     find_package(SDL2)
     set(THREADS_PREFER_PTHREAD_FLAG ON)
     find_package(Threads REQUIRED)
+    if(NO_PULSE)
+        add_compile_definitions(NO_PULSE)
+    endif()
+
  	set(ADDITIONAL_LIBRARY_DEPENDENCIES
         "libultraship;"
         "ZAPDUtils;"
