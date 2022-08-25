@@ -5,10 +5,15 @@ $ sudo apt install binutils gcc g++ patchelf p7zip-full python3 make curl git ll
 
 32bit:
 $ git clone https://github.com/foxhound311/Ocarina-rpi4
+
 $ cd Ocarina-rpi4
+
 $ git revert 6818247 -X ours --no-edit
+
 $ sed libultraship/libultraship/color.h -i -e 's|#include "endianness.h"||g'
+
 $ export CFLAGS="-O3 -march=armv8-a+crc -mtune=cortex-a72"
+
 export CPPFLAGS="$CFLAGS"
 export CXXFLAGS="$CFLAGS"
 cmake -H. -Bbuild-cmake -GNinja \
@@ -17,7 +22,9 @@ cmake -H. -Bbuild-cmake -GNinja \
 -DUSE_X11=OFF \
 -DBUILD_OTR_GUI=OFF \
 -DCMAKE_BUILD_TYPE:STRING=Release
+
 $ cmake --build build-cmake --target ExtractAssets -j2
+
 $ cmake --build build-cmake -j2
 
 
