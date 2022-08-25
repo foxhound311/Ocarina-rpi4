@@ -1,5 +1,5 @@
 you need cmake higher than 3.18. i have included cmake 3.24 deb files inside the cmake folder. please install before compiling.
-bigger swapfile is highly recommended
+bigger swapfile is highly recommended. place your rom inside OTRExporter folder.
 
 $ sudo apt install binutils gcc g++ patchelf p7zip-full python3 make curl git lld libsdl2-dev zlib1g-dev libbz2-dev libpng-dev libgles2-mesa-dev wget gpg imagemagick ninja-build   
 
