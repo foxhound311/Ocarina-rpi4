@@ -4,6 +4,7 @@ bigger swapfile is highly recommended
 $ sudo apt install binutils gcc g++ patchelf p7zip-full python3 make curl git lld libsdl2-dev zlib1g-dev libbz2-dev libpng-dev libgles2-mesa-dev wget gpg imagemagick ninja-build   
 
 32bit:
+
 $ git clone https://github.com/foxhound311/Ocarina-rpi4
 
 $ cd Ocarina-rpi4
@@ -29,6 +30,7 @@ $ cmake --build build-cmake -j2
 
 
 64bit:
+
 $ git clone https://github.com/foxhound311/Ocarina-rpi4
 
 $ cd Ocarina-rpi4
