@@ -13,7 +13,6 @@ $ git revert 6818247 -X ours --no-edit
 $ sed libultraship/libultraship/color.h -i -e 's|#include "endianness.h"||g'
 
 $ export CFLAGS="-O3 -march=armv8-a+crc -mtune=cortex-a72"
-
 export CPPFLAGS="$CFLAGS"
 export CXXFLAGS="$CFLAGS"
 cmake -H. -Bbuild-cmake -GNinja \
@@ -30,13 +29,17 @@ $ cmake --build build-cmake -j2
 
 64bit:
 $ git clone https://github.com/foxhound311/Ocarina-rpi4
+
 $ cd Ocarina-rpi4
+
 $ cmake -H. -Bbuild-cmake -GNinja \
 -DNO_PULSE=ON \
 -DUSE_OPENGLES=ON \
 -DUSE_X11=OFF \
 -DBUILD_OTR_GUI=OFF \
 -DCMAKE_BUILD_TYPE:STRING=Release
+
 $ cmake --build build-cmake --target ExtractAssets -j2
+
 $ cmake --build build-cmake -j2
 
